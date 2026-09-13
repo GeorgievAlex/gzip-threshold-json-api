@@ -1,0 +1,352 @@
+{
+  "sanity": [
+    {
+      "label": "sanity-repetitive-raw",
+      "path": "/json?bytes=5000&gzip=0",
+      "trials": 30,
+      "warmupDiscarded": 5,
+      "kept": 25,
+      "bytesOnWire": 5126,
+      "bytesOnWireAllEqual": true,
+      "latencyMeanMs": 0.26,
+      "latencyStdevMs": 0.127
+    },
+    {
+      "label": "sanity-repetitive-gzip",
+      "path": "/json?bytes=5000&gzip=1",
+      "trials": 30,
+      "warmupDiscarded": 5,
+      "kept": 25,
+      "bytesOnWire": 610,
+      "bytesOnWireAllEqual": true,
+      "latencyMeanMs": 0.242,
+      "latencyStdevMs": 0.032
+    }
+  ],
+  "sweep": [
+    {
+      "size": 100,
+      "raw": {
+        "label": "size=100 raw",
+        "path": "/json?bytes=100&gzip=0",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 250,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.097,
+        "latencyStdevMs": 0.01
+      },
+      "gz": {
+        "label": "size=100 gzip",
+        "path": "/json?bytes=100&gzip=1",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 274,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.147,
+        "latencyStdevMs": 0.02
+      }
+    },
+    {
+      "size": 300,
+      "raw": {
+        "label": "size=300 raw",
+        "path": "/json?bytes=300&gzip=0",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 425,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.104,
+        "latencyStdevMs": 0.017
+      },
+      "gz": {
+        "label": "size=300 gzip",
+        "path": "/json?bytes=300&gzip=1",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 309,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.146,
+        "latencyStdevMs": 0.033
+      }
+    },
+    {
+      "size": 500,
+      "raw": {
+        "label": "size=500 raw",
+        "path": "/json?bytes=500&gzip=0",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 627,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.074,
+        "latencyStdevMs": 0.009
+      },
+      "gz": {
+        "label": "size=500 gzip",
+        "path": "/json?bytes=500&gzip=1",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 327,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.155,
+        "latencyStdevMs": 0.093
+      }
+    },
+    {
+      "size": 800,
+      "raw": {
+        "label": "size=800 raw",
+        "path": "/json?bytes=800&gzip=0",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 925,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.101,
+        "latencyStdevMs": 0.041
+      },
+      "gz": {
+        "label": "size=800 gzip",
+        "path": "/json?bytes=800&gzip=1",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 350,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.154,
+        "latencyStdevMs": 0.025
+      }
+    },
+    {
+      "size": 1000,
+      "raw": {
+        "label": "size=1000 raw",
+        "path": "/json?bytes=1000&gzip=0",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 1125,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.337,
+        "latencyStdevMs": 1.062
+      },
+      "gz": {
+        "label": "size=1000 gzip",
+        "path": "/json?bytes=1000&gzip=1",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 366,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.127,
+        "latencyStdevMs": 0.061
+      }
+    },
+    {
+      "size": 1300,
+      "raw": {
+        "label": "size=1300 raw",
+        "path": "/json?bytes=1300&gzip=0",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 1426,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.077,
+        "latencyStdevMs": 0.016
+      },
+      "gz": {
+        "label": "size=1300 gzip",
+        "path": "/json?bytes=1300&gzip=1",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 381,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.113,
+        "latencyStdevMs": 0.019
+      }
+    },
+    {
+      "size": 1500,
+      "raw": {
+        "label": "size=1500 raw",
+        "path": "/json?bytes=1500&gzip=0",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 1626,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.074,
+        "latencyStdevMs": 0.008
+      },
+      "gz": {
+        "label": "size=1500 gzip",
+        "path": "/json?bytes=1500&gzip=1",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 398,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.113,
+        "latencyStdevMs": 0.015
+      }
+    },
+    {
+      "size": 2000,
+      "raw": {
+        "label": "size=2000 raw",
+        "path": "/json?bytes=2000&gzip=0",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 2126,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.1,
+        "latencyStdevMs": 0.068
+      },
+      "gz": {
+        "label": "size=2000 gzip",
+        "path": "/json?bytes=2000&gzip=1",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 434,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.182,
+        "latencyStdevMs": 0.037
+      }
+    },
+    {
+      "size": 3000,
+      "raw": {
+        "label": "size=3000 raw",
+        "path": "/json?bytes=3000&gzip=0",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 3126,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.083,
+        "latencyStdevMs": 0.007
+      },
+      "gz": {
+        "label": "size=3000 gzip",
+        "path": "/json?bytes=3000&gzip=1",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 494,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.139,
+        "latencyStdevMs": 0.028
+      }
+    },
+    {
+      "size": 5000,
+      "raw": {
+        "label": "size=5000 raw",
+        "path": "/json?bytes=5000&gzip=0",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 5126,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.137,
+        "latencyStdevMs": 0.014
+      },
+      "gz": {
+        "label": "size=5000 gzip",
+        "path": "/json?bytes=5000&gzip=1",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 610,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.159,
+        "latencyStdevMs": 0.021
+      }
+    },
+    {
+      "size": 10000,
+      "raw": {
+        "label": "size=10000 raw",
+        "path": "/json?bytes=10000&gzip=0",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 10134,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.183,
+        "latencyStdevMs": 0.025
+      },
+      "gz": {
+        "label": "size=10000 gzip",
+        "path": "/json?bytes=10000&gzip=1",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 910,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.246,
+        "latencyStdevMs": 0.028
+      }
+    },
+    {
+      "size": 20000,
+      "raw": {
+        "label": "size=20000 raw",
+        "path": "/json?bytes=20000&gzip=0",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 20127,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.327,
+        "latencyStdevMs": 0.021
+      },
+      "gz": {
+        "label": "size=20000 gzip",
+        "path": "/json?bytes=20000&gzip=1",
+        "trials": 30,
+        "warmupDiscarded": 5,
+        "kept": 25,
+        "bytesOnWire": 1565,
+        "bytesOnWireAllEqual": true,
+        "latencyMeanMs": 0.458,
+        "latencyStdevMs": 0.022
+      }
+    }
+  ],
+  "real": {
+    "raw": {
+      "label": "real-fixture-raw",
+      "path": "/real?gzip=0",
+      "trials": 30,
+      "warmupDiscarded": 5,
+      "kept": 25,
+      "bytesOnWire": 5774,
+      "bytesOnWireAllEqual": true,
+      "latencyMeanMs": 0.046,
+      "latencyStdevMs": 0.01
+    },
+    "gz": {
+      "label": "real-fixture-gzip",
+      "path": "/real?gzip=1",
+      "trials": 30,
+      "warmupDiscarded": 5,
+      "kept": 25,
+      "bytesOnWire": 2000,
+      "bytesOnWireAllEqual": true,
+      "latencyMeanMs": 0.145,
+      "latencyStdevMs": 0.026
+    }
+  }
+}

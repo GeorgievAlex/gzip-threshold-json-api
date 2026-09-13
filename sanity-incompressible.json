@@ -1,0 +1,7 @@
+{
+  "label": "sanity-incompressible",
+  "size": 5000,
+  "raw": 5128,
+  "gz": 3974,
+  "gzipSmaller": true
+}
