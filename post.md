@@ -16,6 +16,8 @@ Methodology, in the order I actually ran it:
 4. A mistake that looks plausible but silently invalidates this kind of measurement: testing only against lorem-ipsum or random text instead of real JSON structure understates how compressible typical API responses are, because real JSON has heavy repetition in key names and short enum-like values that generic text does not. The synthetic generator here deliberately mimics that shape.
 5. Environment check before trusting any of it: this is a CPU-bound question (compression time and header overhead), not a network-timing one, so it ran entirely over loopback (127.0.0.1) on one machine, no Droplet. That is a different situation from an investigation into real network or proxy timing behavior, where a local machine's virtualized networking can produce a phantom result that a real host would not. Byte counts and in-process compression cost do not depend on network path, so loopback was the right environment here, and that decision was made up front rather than discovered as a problem partway through.
 
+The full harness, the raw trial data, and the exact code for every route above is at https://github.com/GeorgievAlex/gzip-threshold-json-api if you want to point it at your own payload shape instead of taking these numbers on faith.
+
 Findings, main sweep (repetitive JSON, target body size 100 to 20000 bytes, raw bytes on wire vs gzip bytes on wire, and latency in milliseconds):
 
 | target body bytes | raw bytes on wire | gzip bytes on wire | gzip/raw ratio | raw latency (ms) | gzip latency (ms) |
